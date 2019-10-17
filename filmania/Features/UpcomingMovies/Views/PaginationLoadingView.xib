@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Muli-SemiBold.ttf">
+            <string>Muli-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PaginationLoadingView" customModule="filmania" customModuleProvider="target">
+            <connections>
+                <outlet property="activityIndicator" destination="NUj-TQ-7le" id="vz2-U7-gTo"/>
+                <outlet property="buttonTryAgain" destination="NDf-Sp-kA3" id="NdB-nI-4oN"/>
+                <outlet property="viewError" destination="6av-BR-06z" id="gBN-qG-LL7"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="105"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="YMb-cS-d0L">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="105"/>
+                    <subviews>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="NUj-TQ-7le">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="37"/>
+                            <color key="color" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </activityIndicatorView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6av-BR-06z">
+                            <rect key="frame" x="0.0" y="37" width="375" height="68"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error fetching next page" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PeP-HR-dMt">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="16.5"/>
+                                    <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli SemiBold" pointSize="14"/>
+                                    <color key="textColor" red="0.60392156862745094" green="0.62745098039215685" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9rf-59-OK4">
+                                    <rect key="frame" x="156" y="16.5" width="63" height="51.5"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NDf-Sp-kA3">
+                                            <rect key="frame" x="0.0" y="0.0" width="63" height="51.5"/>
+                                            <state key="normal" title="Try again"/>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="PeP-HR-dMt" secondAttribute="trailing" id="8Ae-Cw-fbb"/>
+                                <constraint firstItem="PeP-HR-dMt" firstAttribute="centerX" secondItem="6av-BR-06z" secondAttribute="centerX" id="A3D-li-zM9"/>
+                                <constraint firstItem="9rf-59-OK4" firstAttribute="centerX" secondItem="6av-BR-06z" secondAttribute="centerX" id="I62-1H-apr"/>
+                                <constraint firstAttribute="bottom" secondItem="9rf-59-OK4" secondAttribute="bottom" id="Le0-x1-jiq"/>
+                                <constraint firstItem="9rf-59-OK4" firstAttribute="top" secondItem="PeP-HR-dMt" secondAttribute="bottom" id="fwA-wn-aFv"/>
+                                <constraint firstItem="PeP-HR-dMt" firstAttribute="leading" secondItem="6av-BR-06z" secondAttribute="leading" id="qmK-fl-wbt"/>
+                                <constraint firstItem="PeP-HR-dMt" firstAttribute="top" secondItem="6av-BR-06z" secondAttribute="top" id="qwW-Od-t3o"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="YMb-cS-d0L" secondAttribute="bottom" id="RVb-oL-ZMK"/>
+                <constraint firstItem="YMb-cS-d0L" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="U3S-WE-UPG"/>
+                <constraint firstItem="YMb-cS-d0L" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="x9c-2O-2v9"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="YMb-cS-d0L" secondAttribute="trailing" id="xrQ-Pi-fvx"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="117.59999999999999" y="129.08545727136433"/>
+        </view>
+    </objects>
+</document>
