@@ -15,8 +15,12 @@ The Movie Database (TMDb) viewer for iOS
   <img width="300px" src="https://raw.githubusercontent.com/froesmatheus/filmania-ios-app/development/screenshots/screenshot2-dark.png">
 </p>
 
-## Third-party Libraries
+## Third-party dependencies
+
+### [Cocoapods](https://github.com/CocoaPods/CocoaPods)
+
+CocoaPods is a dependency manager for Swift and Objective-C Cocoa projects. Cocoapods is used to manage Kingfisher.
 
 ### [Kingfisher](https://github.com/onevcat/Kingfisher)
 
-Kingfisher is a powerful, pure-Swift library for downloading and caching images from the web. Kingfisher is used to download the movie cover and movie backdrop images
+Kingfisher is a powerful, pure-Swift library for downloading and caching images from the web. Kingfisher is used to download the movie cover and movie backdrop images.
