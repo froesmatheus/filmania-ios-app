@@ -8,26 +8,26 @@
 
 import Foundation
 
-struct RuntimeError: Error {
+struct RuntimeError: LocalizedError {
     let message: String
 
     init(_ message: String) {
         self.message = message
     }
 
-    public var localizedDescription: String {
+    var errorDescription: String? {
         return message
     }
 }
 
-struct APIError: Decodable, Error {
+struct APIError: Decodable, LocalizedError {
     let statusMessage: String
 
     enum CodingKeys: String, CodingKey {
         case statusMessage = "status_message"
     }
 
-    public var localizedDescription: String {
+    var errorDescription: String? {
         return statusMessage
     }
 }
