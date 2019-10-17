@@ -7,10 +7,4 @@ target 'filmania' do
 
   # Pods for filmania
   pod 'Kingfisher', '~> 5.0'
-
-  target 'filmaniaTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
 end
