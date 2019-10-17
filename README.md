@@ -15,6 +15,16 @@ The Movie Database (TMDb) viewer for iOS
   <img width="300px" src="https://raw.githubusercontent.com/froesmatheus/filmania-ios-app/development/screenshots/screenshot2-dark.png">
 </p>
 
+## Setup
+
+### Install Cocoapods
+
+Run `sudo gem install cocoapods`
+
+### Install dependencies
+
+Run `pod install` in the project root folder
+
 ## Third-party dependencies
 
 ### [Cocoapods](https://github.com/CocoaPods/CocoaPods)
